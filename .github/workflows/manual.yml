@@ -37,4 +37,5 @@ jobs:
            script: |
             adb kill-server
             adb start-server
+            adb install teste-capivara-amiga.apk
             maestro test maestro/android/login/loginCapivara.yaml --format=junit --output=report.xml --no-ansi
