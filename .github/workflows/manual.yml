@@ -22,4 +22,6 @@ jobs:
           emulator-build: 7425822
           ram-size: 2048M
           target: default
+          command: adb kill-server
+          command2: adb start-server
           script: maestro test --format=junit --output=report.xml --no-ansi .android
