@@ -14,9 +14,12 @@ jobs:
       - uses: dniHze/maestro-test-action@v1
       - uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
+          api-level: 23
+          arch: x86
+          profile: Nexus 5X
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           emulator-build: 7425822
-          arch: x86_64
           ram-size: 2048M
           target: default
           workspace: android/login
