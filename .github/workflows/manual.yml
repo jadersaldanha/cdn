@@ -25,6 +25,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - uses: dniHze/maestro-test-action@v1
+
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -35,4 +37,4 @@ jobs:
            script: |
             adb kill-server
             adb start-server
-            maestro test maestro/android/login/loginCapivara.yaml
+            maestro test maestro/android/login/loginCapivara.yaml --format=junit --output=report.xml --no-ansi .maestro
