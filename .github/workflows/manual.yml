@@ -37,4 +37,4 @@ jobs:
            script: |
             adb kill-server
             adb start-server
-            maestro test maestro/android/login/loginCapivara.yaml --format=junit --output=report.xml --no-ansi .maestro
+            maestro test maestro/android/login/loginCapivara.yaml --format=junit --output=report.xml --no-ansi maestro
