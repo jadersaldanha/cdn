@@ -32,6 +32,7 @@ jobs:
            target: default
            arch: x86_64
            profile: Nexus 4
-           emulator-options: -no-window -no-boot-anim -no-audio -no-snapshot-load
            script: |
+            adb kill-server
+            adb start-server
             maestro test maestro/android/login/loginCapivara.yaml
