@@ -22,5 +22,4 @@ jobs:
           emulator-build: 7425822
           ram-size: 2048M
           target: default
-          workspace: android/login
           script: maestro test --format=junit --output=report.xml --no-ansi .android
