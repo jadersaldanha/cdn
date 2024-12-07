@@ -24,5 +24,5 @@ jobs:
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           workspace: android/
-          app-binary-id: 180a59b33ea84d0576ce1310fdb5b1557d712cd5
+          app-binary-id: 70eabbcdf6d62331d9cb2088339c8145d92e2ee4
           android-api-level: ${{ matrix.api-level }}
