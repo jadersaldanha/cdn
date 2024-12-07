@@ -8,6 +8,7 @@ appId: br.com.cdntv.capivaraamiga
 - tapOn:
     id: ${output.login.username}
 - inputText: "capivara"
+- "back"
 - tapOn:
     id: ${output.login.password}
 - inputText: "caplogin"
