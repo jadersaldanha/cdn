@@ -19,3 +19,6 @@ As instruções estão nessa pagina: https://maestro.mobile.dev/getting-started/
 - Após essa configuração e instalação você pode executar o comando maestro test loginCapivara.yaml dentro da pasta do projeto e com o emulador aberto, provendo o adb necessário para os testes. No proprio console você consegue visualizar os resultados dos testes, porém
 se executar maestro test maestro/android/login/loginCapivara.yaml --format=junit --output=report.xml --no-ansi terás um report em xml. Você pode trocar os parametros para html também, caso queira o report em html.
 
+Alguns videos com execuções de demonstração:
+
+https://drive.google.com/drive/folders/1f2CkoRhU2HtcUR83vRZvXcxAlIK2JcBF?usp=sharing
