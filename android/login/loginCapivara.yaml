@@ -1,6 +1,6 @@
 appId: br.com.cdntv.capivaraamiga
 ---
-- runScript: login.js
+- runScript: login/login.js
 - launchApp
 - assertVisible: ${output.login.titulo}
 - tapOn:
