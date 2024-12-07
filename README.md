@@ -21,4 +21,6 @@ se executar maestro test maestro/android/login/loginCapivara.yaml --format=junit
 
 Alguns videos com execuções de demonstração:
 
+O video 3 mostra a interface do maestro cloud que esta na branch develop com outro github action.
+
 https://drive.google.com/drive/folders/1f2CkoRhU2HtcUR83vRZvXcxAlIK2JcBF?usp=sharing
