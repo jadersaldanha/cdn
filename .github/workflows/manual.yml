@@ -1,41 +1,28 @@
-name: Android Maestro Test
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+name: Android (Maestro Cloud)
+
+on: [push, pull_request]
+
 
 jobs:
-  android_test:
-     name: Running Android Tests
-     runs-on: macos-13
-     continue-on-error: true
-     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  run_android_e2e:
+    timeout-minutes: 45
+    runs-on: ubuntu-latest
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        api-level: [33]
+        # ^^^ from: https://cloud.mobile.dev/reference/device-configuration#android
+
+    steps:
+      - uses: actions/checkout@v3
         with:
-          java-version: 17
-          distribution: 'adopt'
+          fetch-depth: 1
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - uses: dniHze/maestro-test-action@v1
-
-      - name: Start Android Emulator and executing maestro tests
-        uses: reactivecircus/android-emulator-runner@v2
+      - uses: mobile-dev-inc/action-maestro-cloud@v1
         with:
-           api-level: 26
-           target: default
-           arch: x86_64
-           profile: Nexus 4
-           script: |
-            adb kill-server
-            adb start-server
-            adb install teste-capivara-amiga.apk
-            maestro test android/perfilCapivara.yaml --format=junit --output=report.xml --no-ansi
+          api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
+          workspace: android/
+          app-binary-id: 180a59b33ea84d0576ce1310fdb5b1557d712cd5
+          android-api-level: ${{ matrix.api-level }}
