@@ -3,7 +3,7 @@ Automação de testes mobile utilizando o aplicativo da CDN (capivara).
 
 Essa automação de testes foi construída com base na documentação do framework maestro: https://maestro.mobile.dev/ utilizando o padrão de projeto page objects.
 Os elementos de interface são identificados em arquivos XX.js, proporcionando maior clareza na escrita do código, pensando em manutenção de ID's no futuro.
-O fluxo de login com o caso de teste positivo onde são feitas validaçóes na tela esta na pasta login com o nome loginCapivara.yaml.
+O fluxo de login com o caso de teste positivo onde são feitas validaçóes na tela esta na pasta login com o nome loginCapivara.yaml. Existe outro fluxo que se chama perfilCapivara onde o mesmo chama o fluxo de login e os interliga, possibilidade que pode ser adicionada a outros fluxos do app no futuro.
 
 Foi feita a construção parelela de um arquivo chamado "manual.yml" dentro da pasta workflows do github onde é utilizada uma imagem com as configurações necessárias para executar o teste dentro de uma pipeline de testes automatizados.
 Também foi feita uma opção utilizando o maestro cloud onde se pode paralelizar a execução e também obter videos da execução do teste na branch develop. 
