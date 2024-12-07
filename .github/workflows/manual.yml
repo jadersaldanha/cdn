@@ -1,4 +1,4 @@
-name: Android Instrumentation Test
+name: Android Maestro Test
 on:
   push:
     branches:
@@ -27,7 +27,7 @@ jobs:
 
       - uses: dniHze/maestro-test-action@v1
 
-      - name: Start Android Emulator
+      - name: Start Android Emulator and executing maestro tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
            api-level: 26
