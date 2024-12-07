@@ -23,6 +23,5 @@ jobs:
       - uses: mobile-dev-inc/action-maestro-cloud@v1
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
-          workspace: android/
           app-binary-id: 180a59b33ea84d0576ce1310fdb5b1557d712cd5
           android-api-level: ${{ matrix.api-level }}
