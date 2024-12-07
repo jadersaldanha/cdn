@@ -2,9 +2,7 @@ appId: br.com.cdntv.capivaraamiga
 ---
 - runScript: login.js
 - launchApp
-- assertVisible: "Capivara Amiga"
-- assertVisible:
-    id: "br.com.cdntv.capivaraamiga:id/imageView2"
+- assertVisible: ${output.login.titulo}
 - tapOn:
     id: ${output.login.username}
 - inputText: "capivara"
