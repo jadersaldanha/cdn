@@ -1,6 +1,6 @@
 appId: br.com.cdntv.capivaraamiga
 ---
-- runFlow: login/LoginCapivara.yaml
+- runFlow: loginCapivara.yaml
 - runScript: perfil.js
 - assertVisible:
     id: ${output.perfil.botaoPerfil}
